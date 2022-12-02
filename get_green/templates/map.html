@@ -1,0 +1,241 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <title>Maps Project</title>
+
+    <style>
+        #map{
+            height: 800px;
+            width: 800px;
+            margin:5rem auto;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+
+        
+const apiKey = 'pk.eyJ1IjoiYWxmcmVkMjAxNiIsImEiOiJja2RoMHkyd2wwdnZjMnJ0MTJwbnVmeng5In0.E4QbAFjiWLY8k3AFhDtErA';
+
+const mymap = L.map('map').setView([10.850516, 76.271080], 13);
+
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+    maxZoom: 18,
+    id: 'mapbox/streets-v11',
+    tileSize: 512,
+    zoomOffset: -1,
+    accessToken: apiKey
+}).addTo(mymap);
+
+// Adding Marker
+
+const marker = L.marker([ 8.9952 ,76.6105]).addTo(mymap);
+
+// Add popup message
+let template = `
+<h3>Munroe Island</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'munro.jpeg' %}"/>
+</div>
+`
+marker.bindPopup(template);
+
+// Add circle                                                    
+const circle = L.circle([ 8.9952 ,76.6105], {
+    radius:10000, 
+    color: 'red', 
+    fillColor: 'red',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('manroe island')
+
+const marker1 = L.marker([ 8.5678 ,76.8908]).addTo(mymap);
+
+// Add popup message
+let template1 = `
+<h3>KARYAVATTOM</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'karyavattom.jpeg' %}"/>
+</div>
+`
+marker1.bindPopup(template1);
+const circle1 = L.circle([ 8.5678 ,76.8908], {
+    radius:10000, 
+    color: 'red', 
+    fillColor: 'red',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('karyavattom')
+
+
+const marker3= L.marker([ 12.8805 ,74.8592]).addTo(mymap);
+
+// Add popup message
+let template3 = `
+<h3>kadri</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'kadri.jpeg' %}"/>
+</div>`
+marker3.bindPopup(template3);
+// Add Polygon
+const circle2 = L.circle([ 12.8805 ,74.8592], {
+    radius:10000, 
+    color: 'red', 
+    fillColor: 'red',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('kadri')
+
+const marker4= L.marker([ 8.8963 ,76.5907]).addTo(mymap);
+
+// Add popup message
+let template4 = `
+<h3>ASRAMAM</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'asram..jpg' %}"/>
+</div>`
+marker4.bindPopup(template4);
+const circle3= L.circle([ 8.8963 ,76.5907], {
+    radius:10000, 
+    color: 'red', 
+    fillColor: 'red',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('Asramam')
+
+const marker5= L.marker([ 10.7867,76.6548]).addTo(mymap);
+
+// Add popup message
+let template5 = `
+<h3>PALAKAD</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'palakad.jpg' %}"/>
+</div>`
+marker5.bindPopup(template5);
+const circle4= L.circle([ 10.7867,76.6548], {
+    radius:10000, 
+    color: 'red', 
+    fillColor: 'red',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('Palakad')
+
+const marker6= L.marker([10.5276 ,76.2144]).addTo(mymap);
+
+// Add popup message
+let template6 = `
+<h3>THRISSUR</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'THRISSUR.jpg' %}"/>
+</div>`
+marker6.bindPopup(template6);
+
+
+const circle5 = L.circle([ 10.5276 ,76.2144], {
+    radius:10000, 
+    color: 'yellow', 
+    fillColor: 'yellow',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('THRISSUR')
+
+const marker7= L.marker([8.9952 ,76.6105]).addTo(mymap);
+
+// Add popup message
+let template7 = `
+<h3>PARVATHIYAR JN</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'PJN.jpg' %}"/>
+</div>`
+marker7.bindPopup(template7);
+const circle6 = L.circle([ 8.9952 ,76.6105], {
+    radius:10000, 
+    color: 'yellow', 
+    fillColor: 'yellow',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('parivathiyar junction')
+
+const marker8= L.marker([ 11.8895 ,75.3660]).addTo(mymap);
+
+// Add popup message
+let template8 = `
+<h3>MEKERI</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'KANNUR.jpg' %}"/>
+</div>`
+marker8.bindPopup(template8);
+const circle7 = L.circle([ 11.8895 ,75.3660], {
+    radius:10000, 
+    color: 'yellow', 
+    fillColor: 'yellow',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('Mekeri')
+
+const marker9= L.marker([ 11.0510 ,76.0711]).addTo(mymap);
+
+// Add popup message
+let template9 = `
+<h3>MEKERI</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'MALAPURAM.jpg' %}"/>
+</div>`
+marker9.bindPopup(template9);
+const circle8= L.circle([ 11.0510 ,76.0711], {
+    radius:10000, 
+    color: 'yellow', 
+    fillColor: 'yellow',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('MALAPURAM')
+
+const marker10= L.marker([ 11.9293 ,75.5735]).addTo(mymap);
+
+// Add popup message
+let template10 = `
+<h3>MEKERI</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'MEEYANOOR.jpg' %}"/>
+</div>`
+marker10.bindPopup(template10);
+const circle10 = L.circle([ 11.9293 ,75.5735], {
+    radius:10000, 
+    color: 'green', 
+    fillColor: 'green',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('MEEYANNOOR')
+const marker11= L.marker([ 8.9632 ,77.0651]).addTo(mymap);
+
+// Add popup message
+let template11 = `
+<h3>THENMALA</h3>
+<div style="text-align:center">
+    <img width="150" height="150"src="{% static 'THENMALA.jpeg' %}"/>
+</div>`
+marker11.bindPopup(template11);
+const circle11 = L.circle([ 8.9632 ,77.0651], {
+    radius:10000, 
+    color: 'green', 
+    fillColor: 'green',
+    fillOpacity:0.5
+}).addTo(mymap).bindPopup('THENMALA')
+
+const polygon = L.polygon([
+   
+    [40.73618, -73.97545],
+    [40.731497, -73.974342],
+    [40.729324, -73.972234],
+    [40.732368, -73.981293],
+], {
+    color:'blue',
+    fillColor:'blue',
+    fillOpacity:0.2
+}).addTo(mymap).bindPopup(' I am a polygon')
+
+
+
+
+    </script>
+</body>
+</html>

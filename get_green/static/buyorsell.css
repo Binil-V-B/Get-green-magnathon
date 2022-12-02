@@ -1,0 +1,40 @@
+.left-div{
+    width: 200px;
+    height: 150px;
+    background-color: rgb(110, 6, 6);
+    float: left;
+    margin-left: 400px;
+    margin-top: 270px;
+    border-radius: 30px;
+    
+}
+.right-div{
+    width: 200px;
+    height: 150px;
+    background-color: rgb(110, 6, 6);
+    float: right;
+    margin-right: 400px;
+    margin-top: 270px;
+    border-radius: 30px;
+}
+.buytext{
+    text-decoration: none;
+    margin-top: 40px;
+    margin-left: 70px;
+    font-size: 35px;
+    font-style:normal;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.selltext{
+    text-decoration: none;
+    margin-top: 40px;
+    margin-left: 70px;
+    font-size: 35px;
+    font-style:normal;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+.background{
+    background-image: url(buybackground.jpg);
+}

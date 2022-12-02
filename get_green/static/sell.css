@@ -1,0 +1,17 @@
+.navbar-nav{
+    margin-left: 650px;
+}
+.navbar{
+    background-image:linear-gradient(to right, rgb(138, 240, 138), rgb(47, 243, 47));
+
+    height: 75px;
+    position: sticky;
+}
+.nav-link{
+    color: white;
+}
+.navbar-brand{
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+}

@@ -1,0 +1,150 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Green</title>
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+    <link rel="icon" href="" type="image/gif" sizes="16x16">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Fredoka+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  ">
+      <img style="width: 100px; height: 90px; margin-top: 15px;" src="{% static 'logo main.png' %}" alt="">
+        <a style="font-size: 35px; font-family: 'Carter One', cursive;" class="navbar-brand" href="#">Get Green</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a style="font-size: 23px;" class="nav-link" href="home">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a style="font-size: 23px;" class="nav-link" href="map">Map</a>
+            </li>
+            <li class="nav-item">
+              <a style="font-size: 23px;" class="nav-link" href="#rank">Rank</a>
+            </li>
+            <li class="nav-item">
+              <a style="font-size: 23px;" class="nav-link " href="invest">Invest</a>
+            </li>
+            <li class="nav-item">
+                <a style="font-size: 23px;" class="nav-link" href="buy1">Buy</a>
+              </li>
+              
+            </ul>
+
+       
+          
+      </nav>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="{% static '#carouselExampleIndicators' %}" data-slide-to="0" class="active"></li>
+    <li data-target="{% static '#carouselExampleIndicators' %}" data-slide-to="1"></li>
+    <li data-target="{% static '#carouselExampleIndicators' %}" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="{% static 'background12.jpeg' %}" alt="First slide">
+    </div>
+    <div class="carousel-item">
+        <iframe  src="https://www.google.com/maps/d/u/0/embed?mid=1a6laRp0tmhAQp6JHcSNzk6ZSpl56i-4&ehbc=2E312F" width="100%" height="580"></iframe>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="{% static 'slider.jpeg' %}" alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<div style="display:inline-flex;" class="mid-div">
+    <div style="margin-left: 30px; margin-top: 30px; height: 300px;" class="card" style="width:18rem;">
+        <div style="width: 350px;" class="card-body">
+          <h5 style="font-size: 25px; font-family: 'Carter One', cursive;" class="card-title">INVEST</h5>
+          <p class="card-text">Through this portal,an investor can invest funds and earn credits</p>
+          <a href="invest" class="btn btn-primary">Explore</a>
+        </div>
+      </div>
+      <div style="margin-left: 60px; margin-top: 30px; height: 300px;" class="card" style="width: 18rem;">
+        <div style="width: 350px;" class="card-body">
+          <h5 style="font-size: 25px; font-family: 'Carter One', cursive;" class="card-title">REPORT</h5>
+          <p class="card-text">Through this portal,an user can report the problem by waste in a region</p>
+          <a href="report" class="btn btn-primary">Explore</a>
+        </div>
+      </div>
+      <div style="margin-left: 60px;margin-top: 30px; height: 300px;" class="card" style="width: 18rem;">
+        <div style="width: 350px;" class="card-body">
+          <h5 style="font-size: 25px; font-family: 'Carter One', cursive;" class="card-title">CLEAN</h5>
+          <p class="card-text">Through this portal,user can submit his cleaning work</p>
+          <a href="clean" class="btn btn-primary">Explore</a>
+        </div>
+      </div>
+</div>
+<div style="display:inline-flex;" class="mid-div2">
+  <div style="margin-left: 30px;margin-top: 30px; height: 300px;" class="card" style="width: 18rem;">
+    <div style="width: 350px;" class="card-body">
+      <h5 style="font-size: 25px; font-family: 'Carter One', cursive;" class="card-title">BUY/SELL</h5>
+      <p class="card-text">Through this portal,people can sell or buy use to stuffs and earn credits </p>
+      <a href="buyorsell" class="btn btn-primary">Explore</a>
+    </div>
+  </div>
+  <div style="margin-left: 60px; margin-top: 30px; height: 300px;" class="card" style="width: 18rem;">
+    <div style="width: 350px;" class="card-body">
+      <h5 style="font-size: 25px; font-family: 'Carter One', cursive;" class="card-title">ORIENTATION</h5>
+      <p class="card-text">Through this portal,Orientation lifestream and videos are introduced to develop an awareness about waste management</p>
+      <a href="orientation" class="btn btn-primary">Explore</a>
+    </div>
+    </div>
+</div>
+<div class="rank-div">
+  <div id="rank">
+  <h2 style="margin-left:20px; margin-top: 10px; font-weight: bold;" > INVESTOR RANKING</h2>
+  <ol class="list-group">
+    {% for x in name %}
+   
+    <li style="background-color:rgb(41, 241, 8) ; font-weight: bold; font-size: 23px; font-weight: bold;" class="list-group-item">{{x.name}} - ₹{{x.amount}}</li>
+    {% endfor %}
+  </ol>
+  </div>
+  <div class="rank-img">
+  <img class="environmentimg"src="{% static 'environment.jpg' %}" alt="">
+  <p style="margin-left:290px ; padding-top: 10px; font-weight: bold; font-family: cursive;">"Wise spending is part of wise investing.<br> And it's never too late to start"</p>
+  </div>
+</div>
+<div class="posterdiv">
+<div class="homeposter">
+<p>Creating useful and decorative items out of waste available at home, instead of throwing them is the best use for them. Lots of waste is generated at home daily such as coconut shells, old newspapers, glass jars, plastic bottles and cardboard boxes. </p>
+<img style="width:320px; height: 230px; margin-left: 50px; " src="{% static 'homedecoration.jpeg' %}" alt="">
+</div>
+<div class="vedioposter">
+  <iframe width="480" height="280" src="https://www.youtube.com/embed/jE7oHYu_3xo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+</div>
+<div class="about">
+    <h1>About Us</h1>
+    <p>Web based application aiming to revolutionise the traditional waste management system</p>
+</div>
+<div class="footer">
+  <p Align="center" style="color:white ; padding-top: 52px;">Copyright © get green|All Rights Reserved</p>
+</div>
+<script src="{% static 'https://code.jquery.com/jquery-3.2.1.slim.min.js' %}" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="{% static 'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js' %}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="{% static 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js' %}" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
